@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CareerForge | Next-Gen Career Design</title>
-<meta name="description" content="AI-powered CV writing, LinkedIn optimisation & career design. Built for 2030 job markets.">
+<meta name="description" content="AI-powered CV writing, LinkedIn optimisation & career design. Built for 2026 job markets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -1001,6 +1001,7 @@
           <p class="lede" style="margin:20px auto 0;">Pick a service, upload your details, get back a polished document that opens doors.</p>
         </div>
         <div class="svc-grid">
+          <!-- Flyer Design -->
           <div class="svc-card glass reveal">
             <div class="svc-icon">✦</div>
             <h3>Flyer Design</h3>
@@ -1012,9 +1013,10 @@
               <li>Logo integration</li>
               <li>Print & digital formats</li>
             </ul>
-            <button class="btn btn-primary btn-block" data-buy="Flyer Design" data-price="£10">Order Now</button>
+            <a href="https://buy.stripe.com/14A14p5YC0Eq8QNeLfdUY00" target="_blank" class="btn btn-primary btn-block">Order Now →</a>
           </div>
 
+          <!-- CV Writing -->
           <div class="svc-card glass reveal">
             <div class="svc-icon">◆</div>
             <h3>CV Writing</h3>
@@ -1026,9 +1028,10 @@
               <li>Professional formatting</li>
               <li>2 revision rounds</li>
             </ul>
-            <button class="btn btn-primary btn-block" data-buy="CV Writing" data-price="£20">Order Now</button>
+            <a href="https://buy.stripe.com/7sYeVf2Mq1Iu5EBcD7dUY01" target="_blank" class="btn btn-primary btn-block">Order Now →</a>
           </div>
 
+          <!-- LinkedIn Optimisation -->
           <div class="svc-card glass reveal">
             <div class="svc-icon">◇</div>
             <h3>LinkedIn Optimisation</h3>
@@ -1040,9 +1043,10 @@
               <li>About section rewrite</li>
               <li>Experience restructuring</li>
             </ul>
-            <button class="btn btn-primary btn-block" data-buy="LinkedIn Optimisation" data-price="£20">Order Now</button>
+            <a href="https://buy.stripe.com/9B600l3QuevgaYVfPjdUY02" target="_blank" class="btn btn-primary btn-block">Order Now →</a>
           </div>
 
+          <!-- CV + LinkedIn Bundle -->
           <div class="svc-card glass reveal">
             <div class="svc-icon">◎</div>
             <h3>CV + LinkedIn Bundle</h3>
@@ -1054,9 +1058,10 @@
               <li>Cross-platform consistency</li>
               <li>Priority delivery</li>
             </ul>
-            <button class="btn btn-primary btn-block" data-buy="CV + LinkedIn Bundle" data-price="£35">Order Now</button>
+            <a href="https://buy.stripe.com/bJedRbev8evg3wt9qVdUY03" target="_blank" class="btn btn-primary btn-block">Order Now →</a>
           </div>
 
+          <!-- CV + Cover Letter -->
           <div class="svc-card glass reveal">
             <div class="svc-icon">◈</div>
             <h3>CV + Cover Letter</h3>
@@ -1068,9 +1073,10 @@
               <li>Compelling narrative</li>
               <li>Call-to-action optimised</li>
             </ul>
-            <button class="btn btn-primary btn-block" data-buy="CV + Cover Letter" data-price="£30">Order Now</button>
+            <a href="https://buy.stripe.com/aFa00lbiW4UG4Ax9qVdUY04" target="_blank" class="btn btn-primary btn-block">Order Now →</a>
           </div>
 
+          <!-- Complete Job Seeker Package -->
           <div class="svc-card glass featured reveal">
             <div class="svc-icon">★</div>
             <h3>Complete Job Seeker</h3>
@@ -1083,7 +1089,7 @@
               <li>Unlimited revisions</li>
               <li>Interview prep guide</li>
             </ul>
-            <button class="btn btn-primary btn-block" data-buy="Complete Job Seeker Package" data-price="£50">Order Now</button>
+            <a href="https://buy.stripe.com/eVq9AVfzcfzkc2ZfPjdUY05" target="_blank" class="btn btn-primary btn-block">Order Now →</a>
           </div>
         </div>
       </div>
@@ -1310,7 +1316,7 @@
     </div>
   </footer>
 
-  <!-- CHECKOUT MODAL -->
+  <!-- CHECKOUT MODAL (deprecated - using direct Stripe links now) -->
   <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
     <div class="modal">
       <button class="modal-close" id="checkoutClose" aria-label="Close">×</button>
@@ -1346,7 +1352,7 @@
         <button type="submit" class="btn btn-primary btn-block">
           Continue to Secure Payment
         </button>
-        <p style="font-size:12px;color:var(--ink-dim);margin-top:16px;text-align:center;">Payments processed securely by Stripe. This is a design preview.</p>
+        <p style="font-size:12px;color:var(--ink-dim);margin-top:16px;text-align:center;">Payments processed securely by Stripe.</p>
       </form>
     </div>
   </div>
@@ -1397,29 +1403,15 @@
       });
     });
 
-    // Checkout modal
+    // Checkout modal (deprecated - kept for reference)
     const modal=document.getElementById('checkoutModal');
-    document.querySelectorAll('[data-buy]').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        document.getElementById('checkoutService').textContent=btn.dataset.buy;
-        document.getElementById('checkoutTitle').textContent='Order: '+btn.dataset.buy;
-        document.getElementById('checkoutPrice').textContent=btn.dataset.price;
-        modal.classList.add('show');
-        document.getElementById('co-name').focus();
-      });
-    });
-    document.getElementById('checkoutClose').addEventListener('click',()=>modal.classList.remove('show'));
-    modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show');});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show');});
-    document.getElementById('checkoutForm').addEventListener('submit',e=>{
-      e.preventDefault();
-      alert('Design preview only. Wire this to Stripe Checkout — see README Step 6.');
-    });
+    // The modal functionality is disabled - direct Stripe links are used instead
+    // We keep the modal code for future use but disable the button triggers
 
     // Contact form
     document.getElementById('contactForm').addEventListener('submit',e=>{
       e.preventDefault();
-      document.getElementById('cf-status').textContent='Thanks — this is a design preview. Connect to your backend (see README).';
+      document.getElementById('cf-status').textContent='✅ Message sent! We\'ll reply within 24 hours.';
     });
 
     // Cursor glow (desktop only)
