@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerForge London | ND-Friendly Career Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{
+            --bg:#06060a;
+            --surface:#0e0e14;
+            --surface-2:#16161f;
+            --primary:#00d4aa;
+            --primary-dim:#00d4aa18;
+            --primary-glow:#00d4aa33;
+            --text:#f0f0f5;
+            --text-muted:#8b92a8;
+            --accent:#ff6b6b;
+            --border:#1e1e2e;
+            --radius:14px
+        }
+        body{
+            font-family:'Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.65;
+            overflow-x:hidden;
+            -webkit-font-smoothing:antialiased
+        }
+        .container{max-width:1120px;margin:0 auto;padding:0 24px}
+
+        /* Header */
+        header{
+            padding:20px 0;
+            border-bottom:1px solid var(--border);
+            position:sticky;
+            top:0;
+            background:rgba(6,6,10,0.92);
+            backdrop-filter:blur(12px);
+            z-index:100
+        }
+        .nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+        .logo{font-weight:900;font-size:1.35rem;color:var(--primary);letter-spacing:-0.8px;display:flex;align-items:center;gap:8px}
+        .logo span{color:var(--text)}
+        .logo-badge{font-size:0.6rem;font-weight:700;background:var(--primary-dim);color:var(--primary);padding:3px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:0.5px}
+        .nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+        .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:600;transition:color 0.2s}
+        .nav-links a:hover{color:var(--primary)}
+        .nav-cta{
+            background:var(--primary);color:var(--bg);padding:10px 20px;border-radius:8px;
+            font-weight:800;font-size:0.85rem;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer
+        }
+        .nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px var(--primary-glow)}
+
+        /* Hero */
+        .hero{padding:100px 0 60px;text-align:center;position:relative}
+        .hero-badge{
+            display:inline-flex;align-items:center;gap:8px;
+            background:var(--primary-dim);color:var(--primary);
+            padding:8px 18px;border-radius:100px;font-size:0.8rem;font-weight:700;
+            margin-bottom:28px;border:1px solid var(--primary-glow)
+        }
+        .hero h1{font-size:clamp(2.2rem,5.5vw,3.8rem);font-weight:900;line-height:1.08;margin-bottom:22px;letter-spacing:-1.5px}
+        .hero h1 .highlight{color:var(--primary);display:block}
+        .hero p{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--text-muted);max-width:640px;margin:0 auto 36px}
+        .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+        .btn{padding:15px 32px;border-radius:10px;font-weight:800;font-size:1rem;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;border:none}
+        .btn-primary{background:var(--primary);color:var(--bg)}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px var(--primary-glow)}
+        .btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+        .btn-outline:hover{background:var(--primary-dim)}
+        .btn-ghost{background:var(--surface-2);color:var(--text);border:1px solid var(--border)}
+        .btn-ghost:hover{border-color:var(--primary)}
+
+        /* Trust bar */
+        .trust{padding:28px 0;text-align:center;color:var(--text-muted);font-size:0.88rem;border-bottom:1px solid var(--border)}
+        .trust strong{color:var(--text);font-weight:700}
+        .trust-dot{display:inline-block;width:4px;height:4px;background:var(--primary);border-radius:50%;margin:0 10px;vertical-align:middle}
+
+        /* Section base */
+        section{padding:80px 0;border-top:1px solid var(--border)}
+        .section-title{text-align:center;margin-bottom:56px}
+        .section-title h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:12px;font-weight:800}
+        .section-title p{color:var(--text-muted);max-width:520px;margin:0 auto;font-size:1.05rem}
+
+        /* Products */
+        .products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+        .product-card{
+            background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+            padding:32px;transition:all 0.25s;position:relative;overflow:hidden
+        }
+        .product-card:hover{border-color:var(--primary);transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,0.35)}
+        .product-card.featured{border-color:var(--primary);background:linear-gradient(180deg,var(--surface) 0%,rgba(0,212,170,0.04) 100%)}
+        .product-card .tag{
+            display:inline-block;font-size:0.7rem;font-weight:800;text-transform:uppercase;
+            letter-spacing:0.8px;padding:4px 10px;border-radius:6px;margin-bottom:14px
+        }
+        .tag-digital{background:rgba(59,130,246,0.12);color:#60a5fa}
+        .tag-service{background:rgba(168,85,247,0.12);color:#c084fc}
+        .tag-bundle{background:rgba(0,212,170,0.12);color:var(--primary)}
+        .product-card h3{font-size:1.15rem;margin-bottom:10px;font-weight:800}
+        .product-card p{color:var(--text-muted);font-size:0.92rem;margin-bottom:20px;min-height:48px}
+        .product-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+        .price{font-size:1.6rem;font-weight:900;color:var(--primary)}
+        .price span{font-size:0.85rem;color:var(--text-muted);font-weight:500;margin-left:4px}
+        .price-strike{text-decoration:line-through;color:var(--text-muted);font-size:0.95rem;margin-right:6px}
+        .buy-btn{
+            background:var(--primary);color:var(--bg);padding:10px 20px;border-radius:8px;
+            font-weight:800;font-size:0.85rem;text-decoration:none;transition:all 0.2s;border:none;cursor:pointer
+        }
+        .buy-btn:hover{box-shadow:0 6px 18px var(--primary-glow)}
+        .buy-btn-outline{
+            background:transparent;color:var(--primary);border:2px solid var(--primary);
+            padding:8px 18px;border-radius:8px;font-weight:800;font-size:0.85rem;text-decoration:none
+        }
+
+        /* About */
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+        .about-text h2{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:18px;font-weight:800}
+        .about-text p{color:var(--text-muted);margin-bottom:14px;font-size:1.02rem}
+        .about-text strong{color:var(--text)}
+        .founder-card{
+            background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+            padding:24px;margin-bottom:16px
+        }
+        .founder-card h4{font-size:1.05rem;margin-bottom:6px;color:var(--primary)}
+        .founder-card p{font-size:0.88rem;color:var(--text-muted);margin:0}
+        .founder-card .cred-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+        .cred-tag{font-size:0.72rem;font-weight:700;background:var(--surface-2);color:var(--text-muted);padding:4px 10px;border-radius:6px;border:1px solid var(--border)}
+        .about-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+        .stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
+        .stat h4{font-size:1.7rem;color:var(--primary);margin-bottom:4px;font-weight:900}
+        .stat p{font-size:0.82rem;color:var(--text-muted);margin:0}
+
+        /* Process */
+        .process{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+        .process-step{
+            flex:1;min-width:220px;text-align:center;padding:28px 20px;
+            background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)
+        }
+        .step-num{
+            width:52px;height:52px;border-radius:50%;background:var(--primary-dim);color:var(--primary);
+            display:flex;align-items:center;justify-content:center;font-weight:900;margin:0 auto 18px;font-size:1.3rem;
+            border:2px solid var(--primary-glow)
+        }
+        .process-step h4{margin-bottom:8px;font-size:1.05rem}
+        .process-step p{color:var(--text-muted);font-size:0.9rem;margin:0}
+
+        /* Contact */
+        .contact-box{
+            background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+            padding:56px 40px;text-align:center;max-width:720px;margin:0 auto
+        }
+        .contact-box h2{margin-bottom:14px;font-size:clamp(1.4rem,3vw,1.9rem)}
+        .contact-box p{color:var(--text-muted);margin-bottom:32px;font-size:1.05rem}
+        .email-big{font-size:clamp(1.2rem,3vw,1.6rem);color:var(--primary);font-weight:900;margin-bottom:28px;word-break:break-all}
+        .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:500px;margin:0 auto 24px}
+        .contact-item{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:16px;font-size:0.9rem}
+        .contact-item strong{display:block;color:var(--primary);margin-bottom:4px;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.5px}
+        .contact-item a{color:var(--text);text-decoration:none;font-weight:700}
+        .contact-item a:hover{color:var(--primary)}
+
+        /* Footer */
+        footer{padding:48px 0 32px;text-align:center;color:var(--text-muted);font-size:0.85rem;border-top:1px solid var(--border)}
+        .footer-brand{font-weight:900;color:var(--text);font-size:1.1rem;margin-bottom:8px}
+        .footer-brand span{color:var(--primary)}
+        .footer-umbrella{font-size:0.8rem;color:var(--text-muted);margin-top:8px}
+        .footer-umbrella a{color:var(--primary);text-decoration:none}
+
+        /* Mobile */
+        @media(max-width:768px){
+            .nav-links{display:none}
+            .hero{padding:70px 0 40px}
+            .about-grid{grid-template-columns:1fr}
+            .process{flex-direction:column}
+            .contact-grid{grid-template-columns:1fr}
+            .product-meta{flex-direction:column;align-items:flex-start}
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                CareerForge<span>.London</span>
+                <span class="logo-badge">Beta</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#process">How It Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#products" class="nav-cta">Get Started</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Built by Neurodivergent Bankers Turned Care Workers
+        </div>
+        <h1>Career tools that work <span class="highlight">with your nervous system</span></h1>
+        <p>Not generic templates. Career architecture designed for care workers, banking professionals, neurodivergent brains, and immigrants rebuilding in the UK.</p>
+        <div class="cta-group">
+            <a href="#products" class="btn btn-primary">Browse Career Packs</a>
+            <a href="#contact" class="btn btn-outline">Book a Body Double Session</a>
+        </div>
+    </div>
+</section>
+
+<div class="trust">
+    <div class="container">
+        <strong>Irving</strong> — 12yr IT & Banking (Standard Bank, NamPost) <span class="trust-dot"></span>
+        <strong>Wife</strong> — BTech HRM, Autism L2, Mental Health L2, 12yr Banking <span class="trust-dot"></span>
+        Current UK Care Sector Professionals
+    </div>
+</div>
+
+<section id="products">
+    <div class="container">
+        <div class="section-title">
+            <h2>Digital Career Packs</h2>
+            <p>Download instantly. No meetings. No small talk. Just tools that work.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <span class="tag tag-digital">Digital</span>
+                <h3>ND-Optimised CV Template Pack</h3>
+                <p>3 ATS-friendly templates for career changers, neurodivergent professionals, and immigrants. Includes gap-explanation scripts.</p>
+                <div class="product-meta">
+                    <div class="price">£10</div>
+                    <a href="https://careerforge.gumroad.com/l/cv-templates" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="tag tag-digital">Digital</span>
+                <h3>NHS / Care STAR Workbook</h3>
+                <p>20 pre-written STAR scenarios for care workers and support workers. Map your daily tasks to interview gold.</p>
+                <div class="product-meta">
+                    <div class="price">£15</div>
+                    <a href="https://careerforge.gumroad.com/l/star-workbook" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="tag tag-digital">Digital</span>
+                <h3>LinkedIn Optimiser for ND Brains</h3>
+                <p>Step-by-step profile rewrite. Headline formulas, About section template, and connection scripts that do not feel like networking.</p>
+                <div class="product-meta">
+                    <div class="price">£12</div>
+                    <a href="https://careerforge.gumroad.com/l/linkedin-optimiser" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="tag tag-digital">Digital</span>
+                <h3>Career Change Planner</h3>
+                <p>30-day decision matrix, skills transfer map, and "pivot without panic" framework. From care to corporate or banking to care.</p>
+                <div class="product-meta">
+                    <div class="price">£15</div>
+                    <a href="https://careerforge.gumroad.com/l/career-planner" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="tag tag-service">Service</span>
+                <h3>Emergency CV Rescue</h3>
+                <p>48-hour turnaround. Send us your CV. We rewrite it, restructure it, and send it back ready to apply. No calls required.</p>
+                <div class="product-meta">
+                    <div class="price">£25</div>
+                    <a href="mailto:ingupandjara@gmail.com?subject=Emergency%20CV%20Rescue" class="buy-btn-outline">Email Us</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <span class="tag tag-service">Service</span>
+                <h3>1:1 Body Double Career Session</h3>
+                <p>60-minute Zoom. We co-write your CV, LinkedIn, or application live. I bring structure. You bring the story. No judgment.</p>
+                <div class="product-meta">
+                    <div class="price">£35</div>
+                    <a href="https://calendly.com/careerforge-london/body-double" class="buy-btn-outline">Book Session</a>
+                </div>
+            </div>
+            <div class="product-card featured" style="grid-column:1/-1">
+                <span class="tag tag-bundle">Best Value</span>
+                <h3>Complete Job Seeker Bundle</h3>
+                <p>All 4 digital packs + 1 Body Double session. Everything you need to apply with confidence. Save £22.</p>
+                <div class="product-meta">
+                    <div><span class="price-strike">£72</span><span class="price">£50</span></div>
+                    <a href="https://careerforge.gumroad.com/l/complete-bundle" class="buy-btn">Get the Bundle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <div class="hero-badge" style="margin-bottom:18px">Why We Built This</div>
+                <h2>We got tired of career advice written by neurotypicals</h2>
+                <p>We are Irving and <strong>[Wife's Name]</strong>. Between us we have <strong>24 years in banking</strong>, degrees in Computer Science and Human Resource Management, and lived experience of ADHD, immigration, and career change.</p>
+                <p>Every career guide told us to "network naturally" and "follow a 5-year plan." That advice does not work for brains like ours. So we built tools that account for hyperfocus, rejection sensitivity, career gaps, and the need to <strong>ship now, not plan forever.</strong></p>
+
+                <div class="founder-card">
+                    <h4>Irving — The Engine</h4>
+                    <p>CompTIA A+/N+, ITIL 4, BA Certified. 12 years in IT & banking (Standard Bank Namibia, NamPost). ERP implementations, payment systems (ISO 20022), core banking. Currently care worker in London. BCS Business Analysis candidate.</p>
+                    <div class="cred-list">
+                        <span class="cred-tag">CompTIA A+</span>
+                        <span class="cred-tag">CompTIA N+</span>
+                        <span class="cred-tag">ITIL 4</span>
+                        <span class="cred-tag">BA Certified</span>
+                        <span class="cred-tag">BCS Candidate</span>
+                    </div>
+                </div>
+
+                <div class="founder-card">
+                    <h4>[Wife] — The Face</h4>
+                    <p>BTech HRM, Autism Cert Level 2, Mental Health Cert Level 2, Numeracy Level 2. 12 years in banking (HR, Customer Service, Reconciliation). 10.6K TikTok followers building ND awareness. Live-in care professional.</p>
+                    <div class="cred-list">
+                        <span class="cred-tag">BTech HRM</span>
+                        <span class="cred-tag">Autism L2</span>
+                        <span class="cred-tag">Mental Health L2</span>
+                        <span class="cred-tag">Numeracy L2</span>
+                        <span class="cred-tag">12yr Banking</span>
+                    </div>
+                </div>
+
+                <div class="about-stats">
+                    <div class="stat">
+                        <h4>24+</h4>
+                        <p>Years Combined Banking</p>
+                    </div>
+                    <div class="stat">
+                        <h4>2+</h4>
+                        <p>Years UK Care Sector</p>
+                    </div>
+                    <div class="stat">
+                        <h4>25%</h4>
+                        <p>Payment Process Improvement</p>
+                    </div>
+                    <div class="stat">
+                        <h4>98%</h4>
+                        <p>ERP System Uptime</p>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:20px">
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:40px;text-align:center">
+                    <div style="font-size:4rem;margin-bottom:16px">👤</div>
+                    <p style="font-weight:800;font-size:1.1rem">Irving Ngupandjara</p>
+                    <p style="color:var(--text-muted);font-size:0.9rem">London, UK</p>
+                    <p style="margin-top:12px"><a href="https://www.linkedin.com/in/irving-ngupandjara/" target="_blank" style="color:var(--primary);font-weight:700;text-decoration:none">LinkedIn Profile →</a></p>
+                </div>
+                <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:40px;text-align:center">
+                    <div style="font-size:4rem;margin-bottom:16px">👤</div>
+                    <p style="font-weight:800;font-size:1.1rem">[Wife's Name]</p>
+                    <p style="color:var(--text-muted);font-size:0.9rem">London, UK</p>
+                    <p style="margin-top:12px"><a href="https://www.tiktok.com/@ua2baby" target="_blank" style="color:var(--primary);font-weight:700;text-decoration:none">TikTok @ua2baby →</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="process">
+    <div class="container">
+        <div class="section-title">
+            <h2>How It Works</h2>
+            <p>No discovery calls. No intake forms. Just 3 steps.</p>
+        </div>
+        <div class="process">
+            <div class="process-step">
+                <div class="step-num">1</div>
+                <h4>Choose Your Pack</h4>
+                <p>Pick a digital product or book a Body Double session. Pay securely via Gumroad or email.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">2</div>
+                <h4>Download or Book</h4>
+                <p>Digital packs arrive instantly via email. Sessions booked within 48 hours.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-num">3</div>
+                <h4>Apply & Win</h4>
+                <p>Use the templates, scripts, and frameworks to land interviews and offers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <div class="contact-box">
+            <h2>Ready to stop planning and start applying?</h2>
+            <p>We do not do sales calls. Email us what you need, or book a Body Double session and we will fix your CV in real-time.</p>
+            <div class="email-big">ingupandjara@gmail.com</div>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <strong>Email</strong>
+                    <a href="mailto:ingupandjara@gmail.com?subject=CareerForge%20Enquiry">ingupandjara@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>LinkedIn</strong>
+                    <a href="https://www.linkedin.com/in/irving-ngupandjara/" target="_blank">Irving Ngupandjara</a>
+                </div>
+            </div>
+            <a href="mailto:ingupandjara@gmail.com?subject=CareerForge%20Enquiry" class="btn btn-primary" style="padding:16px 36px">Email Us Now</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">CareForge<span>.London</span></div>
+        <p>© 2026 CareerForge London. Built with rage, hyperfocus, and zero meetings.</p>
+        <p class="footer-umbrella">A <a href="#">TCB Intelligence</a> brand.</p>
+    </div>
+</footer>
+
+</body>
+</html>
