@@ -1,169 +1,213 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-<head>
-<meta charset="UTF-8">
+<html lang="en-GB"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Staff Evidence Rescue — Find the Gaps in Your Staff Files in 2 Minutes | IRVORA</title>
-<meta name="description" content="Free 2-minute checker finds missing DBS dates, expired training, Care Certificate 16-standard gaps and Oliver McGowan records. £249 live Zoom Rescue call fixes them on your screen. Your data never leaves your machine. A Workflow Rescue product line by IRVORA, London.">
-<meta property="og:title" content="Staff Evidence Rescue — Inspection-ready staff files before CQC looks">
-<meta property="og:description" content="Free checker. £249 live fix. Nothing uploaded, sent or saved — ever.">
-<meta property="og:type" content="website">
+<title>Staff Evidence Rescue — Irvora Compliance</title>
 <style>
 :root{--bg:#f6f8fa;--panel:#fff;--ink:#12263a;--mut:#5b6f82;--line:#d5dee7;--navy:#0f2e4a;--cyan:#0f8ea3;--red:#c0392b;--redbg:#fbe9e7;--amb:#a86a00;--ambbg:#fff2d6;--grn:#1f7a4d;--grnbg:#e3f4ea;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1b29;--panel:#14283b;--ink:#e6eef5;--mut:#9fb4c6;--line:#27425a;--navy:#8fd3e0;--cyan:#4fc3d6;--red:#ff8a7a;--redbg:#3a1c1c;--amb:#ffc25a;--ambbg:#3a2c0f;--grn:#6fdca2;--grnbg:#12301f}}
 :root[data-theme="dark"]{--bg:#0d1b29;--panel:#14283b;--ink:#e6eef5;--mut:#9fb4c6;--line:#27425a;--navy:#8fd3e0;--cyan:#4fc3d6;--red:#ff8a7a;--redbg:#3a1c1c;--amb:#ffc25a;--ambbg:#3a2c0f;--grn:#6fdca2;--grnbg:#12301f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI","Helvetica Neue",Arial,sans-serif}
 main{max-width:980px;margin:0 auto;padding:20px 16px 48px}
-nav{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;padding:8px 0 18px}
-.brand{font:700 1.2rem/1 Georgia,serif;color:var(--navy);letter-spacing:.06em;text-decoration:none}
-.brand small{display:block;font:600 .62rem/1.4 "Segoe UI",sans-serif;letter-spacing:.14em;color:var(--mut)}
-nav ul{display:flex;flex-wrap:wrap;gap:16px;list-style:none;margin:0;padding:0}
-nav a{color:var(--mut);text-decoration:none;font-size:.92rem}
-nav a:hover{color:var(--navy)}
-h1{font:700 clamp(1.9rem,5vw,3rem)/1.12 Georgia,serif;color:var(--navy);margin:10px 0 12px;max-width:20ch}
-h2{font:700 1.3rem/1.3 Georgia,serif;color:var(--navy);margin:0 0 10px}
-h3{font:700 1.02rem/1.3 Georgia,serif;color:var(--navy);margin:0 0 6px}
-.eyebrow{font:700 .72rem/1 "Segoe UI",sans-serif;letter-spacing:.18em;color:var(--cyan);margin:0 0 10px}
-.lede{color:var(--mut);max-width:60ch;margin:0 0 20px;font-size:1.06rem}
-.lock{display:inline-block;border-left:4px solid var(--cyan);padding:8px 14px;background:var(--panel);border-radius:0 6px 6px 0;margin-bottom:20px;max-width:70ch}
-section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px;margin-bottom:18px}
-.ctas{display:flex;flex-wrap:wrap;gap:12px;margin:6px 0 14px}
-a.btn{display:inline-block;text-decoration:none;font-weight:600;border-radius:6px;padding:12px 22px;border:1px solid var(--navy);background:var(--navy);color:var(--bg)}
+h1{font:700 clamp(1.6rem,4.5vw,2.3rem)/1.15 Georgia,"Times New Roman",serif;color:var(--navy);margin:8px 0 8px;max-width:22ch}
+h2{font:700 1.15rem/1.3 Georgia,serif;color:var(--navy);margin:0 0 8px}
+.lede{color:var(--mut);max-width:62ch;margin:0 0 18px}
+.lock{display:inline-block;border-left:4px solid var(--cyan);padding:6px 12px;background:var(--panel);border-radius:0 6px 6px 0;margin-bottom:18px;max-width:70ch}
+section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+textarea,input{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:8px}
+textarea{width:100%;min-height:140px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.82rem}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin:10px 0}
+label{display:flex;flex-direction:column;font-size:.85rem;color:var(--mut);gap:3px}
+input[type=number],input[type=date]{width:130px}
+button{font:inherit;font-weight:600;border-radius:6px;padding:9px 14px;border:1px solid var(--navy);background:var(--navy);color:var(--bg);cursor:pointer}
+button.alt{background:transparent;color:var(--navy)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+a.btn{display:inline-block;text-decoration:none;font:inherit;font-weight:600;border-radius:6px;padding:11px 20px;border:1px solid var(--navy);background:var(--navy);color:var(--bg)}
 a.btn:hover{opacity:.88}
-a.btn.alt{background:transparent;color:var(--navy)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.card{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px}
-.card ul{margin:8px 0 0;padding-left:18px}
-.card li{margin-bottom:6px}
-.price{font:700 2.4rem/1 Georgia,serif;color:var(--navy)}
-.per{font-size:.85rem;color:var(--mut)}
-.steps{counter-reset:s}
-.step{display:flex;gap:14px;margin-bottom:14px}
-.step::before{counter-increment:s;content:counter(s);flex:0 0 34px;height:34px;border-radius:50%;background:var(--navy);color:var(--bg);font-weight:700;display:flex;align-items:center;justify-content:center}
-.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:12px 0}
-.nums .card b{display:block;font:700 1.9rem/1.1 Georgia,serif;color:var(--navy)}
-.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
-details{border-top:1px solid var(--line);padding:10px 2px}
-details:first-of-type{border-top:none}
-summary{cursor:pointer;font-weight:600;color:var(--navy)}
-details p{color:var(--mut);margin:8px 0 4px;max-width:75ch}
+#cta{border-left:4px solid var(--cyan)}
+#ctacount{font-weight:600;color:var(--red)}
+#ctaclear{font-weight:600;color:var(--grn)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:10px 0 14px}
+.k{border-radius:8px;padding:10px 12px;border:1px solid var(--line)}
+.k b{display:block;font:700 2rem/1 Georgia,serif}
+.k.r{background:var(--redbg);color:var(--red)}.k.a{background:var(--ambbg);color:var(--amb)}.k.g{background:var(--grnbg);color:var(--grn)}
+.bar{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-bottom:14px;background:var(--line)}
+.bar i{display:block}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.9rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--bg);color:var(--mut);font-weight:600}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-weight:700;font-size:.8rem}
+.pill.r{background:var(--redbg);color:var(--red)}.pill.a{background:var(--ambbg);color:var(--amb)}.pill.g{background:var(--grnbg);color:var(--grn)}
+ul.iss{margin:0;padding-left:18px}ul.iss li.r::marker{color:var(--red)}ul.iss li.a::marker{color:var(--amb)}
+.msg{color:var(--red);margin:8px 0}
 .note{color:var(--mut);font-size:.85rem;max-width:80ch}
-footer{border-top:1px solid var(--line);margin-top:26px;padding-top:16px;color:var(--mut);font-size:.85rem}
-footer a{color:var(--mut)}
-#theme{position:absolute;right:16px;top:calc(12px + env(safe-area-inset-top,0px));background:none;border:1px solid var(--line);color:var(--mut);border-radius:6px;padding:5px 10px;font-size:.8rem;cursor:pointer}
-.badge{display:inline-block;background:var(--grnbg);color:var(--grn);border-radius:99px;padding:3px 12px;font-weight:700;font-size:.78rem;letter-spacing:.04em}
+details{margin-top:8px}summary{cursor:pointer;font-weight:600;color:var(--navy)}
+#theme{position:absolute;right:16px;top:calc(12px + env(safe-area-inset-top,0px))}
+@media print{button,label.file,a.btn{display:none}}
 </style>
 </head>
 <body>
-<button id="theme" type="button" aria-label="Switch light or dark theme">Theme</button>
+<!-- Keep this page self-contained: no third-party scripts, analytics or web fonts. The on-device promise ("your data stays on this screen") depends on it. -->
 <main>
-<nav>
-<a class="brand" href="#">IRVORA<small>STAFF EVIDENCE RESCUE</small></a>
-<ul>
-<li><a href="#service">The £249 Rescue</a></li>
-<li><a href="#how">How it works</a></li>
-<li><a href="#checker">Free checker</a></li>
-<li><a href="#why">Why us</a></li>
-<li><a href="#faq">FAQ</a></li>
-<li><a href="#book">Book</a></li>
-</ul>
-</nav>
+<button class="alt" id="theme" type="button" aria-label="Switch light or dark theme">Theme</button>
+<h1>Find the gaps in your staff files in two minutes</h1>
+<p class="lede">Paste your staff tracker, or load the demo. The page lists missing DBS dates, expired training, Care Certificate records that need a 16-standard review, and missing Oliver McGowan records.</p>
+<p class="lock"><b>Your data stays on this screen.</b> Nothing is uploaded, sent or saved. Close the tab and it is gone.</p>
 
-<p class="eyebrow">WORKFLOW RESCUE · A PRODUCT LINE OF IRVORA</p>
-<h1>Find the gaps in your staff files before CQC does.</h1>
-<p class="lede">Run the free 2-minute checker. Then, if it finds red, book a 90-minute live Rescue call — we work through your file on <b>your</b> screen and clear the gaps <b>with</b> you. Nothing is uploaded, sent or saved. Ever.</p>
-<p class="lock"><b>Your data stays on your machine at every step</b> — in the tool and on the call. Close the tab and it is gone.</p>
-<div class="ctas">
-<a class="btn" href="#checker">Run the free checker</a>
-<a class="btn alt" href="#book">Book the £249 Rescue</a>
+<section>
+<h2>1. Add your tracker</h2>
+<textarea id="csv" aria-label="Staff tracker as CSV text" placeholder="Paste CSV here: first row = column headings"></textarea>
+<div class="row">
+<label class="file">Or choose a CSV file<input type="file" id="file" accept=".csv,text/csv,text/plain"></label>
+<button type="button" id="demo">Load demo data</button>
+<button type="button" class="alt" id="clear">Clear</button>
 </div>
-
-<section id="service">
-<h2>The £249 Evidence Rescue — one call, gaps gone</h2>
-<div class="grid">
-<div class="card"><h3>What you get</h3><ul>
-<li>90-minute live Zoom session, run on your screen</li>
-<li>Every red flag found and named: DBS gaps, expired training, missing right-to-work evidence, Care Certificate records needing a 16-standard review, missing Oliver McGowan tiers, overdue supervisions and appraisals</li>
-<li>The fixing done <b>with</b> you live: DBS applications started, training bookings drafted, supervision schedule built</li>
-<li>A dated, printable remediation log — your audit trail, ready for any inspector who asks "how do you KNOW?"</li>
-<li>Free re-check after 14 days</li>
-</ul></div>
-<div class="card"><h3>What it costs</h3>
-<p class="price">£249</p>
-<p class="per">one-off · no subscription · no contract</p>
-<div class="ctas"><a class="btn" href="#book">Book your call</a></div>
-<p class="note">Prefer to pay by invoice? Most care homes do. Email us and we invoice 50% to book, 50% on delivery.</p>
-<p class="note">No tracker yet? The free checker includes the exact template — fill it in, then book.</p></div>
-</div>
+<details><summary>Column headings it understands</summary>
+<p class="note">Name, Role, Start date, DBS date, Right to work (Y/N), References (number), Care Certificate date, Care Certificate standards (15 or 16), OM tier (1, 2 or a note), Training expiry (earliest date), Last supervision, Last appraisal. Dates: 31/12/2026 or 2026-12-31. Missing columns are skipped, not guessed. One row per staff member: if your tracker keeps a row per course, summarise each person to their earliest training expiry first.</p>
+<textarea id="tpl" readonly="" aria-label="Template headings" style="min-height:64px"></textarea></details>
 </section>
 
-<section id="how">
-<h2>How it works — three steps, no meetings about meetings</h2>
-<div class="steps">
-<div class="step"><div><h3>Run the free checker</h3><p class="note">Two minutes. Paste your staff tracker (or use the template). Red means fix first, amber means a manager should look. Works on any device.</p></div></div>
-<div class="step"><div><h3>Book your Rescue call</h3><p class="note">Pick a slot below. We confirm within 24 hours. You send nothing — the tracker stays with you.</p></div></div>
-<div class="step"><div><h3>Files inspection-ready</h3><p class="note">We clear the red flags live with you, hand you the dated remediation log, and re-check free after 14 days.</p></div></div>
+<section>
+<h2>2. Your own rules</h2>
+<p class="note">These defaults are prompts, not law. Set them to your written policy.</p>
+<div class="row">
+<label>Check date<input type="date" id="today"></label>
+<label>DBS recheck (years)<input type="number" id="dbsy" value="3" min="1" max="10"></label>
+<label>References needed<input type="number" id="refn" value="2" min="0" max="5"></label>
+<label>Supervision every (days)<input type="number" id="supd" value="90" min="14" max="365"></label>
+<label>Appraisal every (days)<input type="number" id="appd" value="365" min="90" max="730"></label>
+<label>Training warn (days)<input type="number" id="trw" value="60" min="7" max="365"></label>
+<button type="button" id="run">Check my files</button>
 </div>
+<div id="err" class="msg" role="alert"></div>
 </section>
 
-<section id="checker">
-<h2>Try the checker now — free, two minutes, no sign-up</h2>
-<p class="note">It reads your actual staff file — not a generic checklist. Missing DBS dates, expired training, Care Certificate records on the old 15 standards, missing Oliver McGowan tiers, overdue supervisions and appraisals. Rules reflect the March 2025 Care Certificate update and the September 2025 Oliver McGowan Code of Practice.</p>
-<div class="ctas"><a class="btn" href="checker.html">Open the free checker</a></div>
-<p class="note">The checker is a single self-contained page — save it, keep it, use it before every supervision cycle. It is a prompt for manager review against your own policy, not a CQC rating or legal advice.</p>
+<section id="out" hidden="">
+<h2>3. What needs attention</h2>
+<div class="kpis" id="kpis"></div>
+<div class="bar" id="bar" aria-hidden="true"></div>
+<div class="wrap"><table><thead><tr><th>Staff member</th><th>Status</th><th>What to check</th></tr></thead><tbody id="rows"></tbody></table></div>
+<details open=""><summary>Counts only: no names, safe to share with an adviser</summary>
+<textarea id="cnt" readonly="" style="min-height:110px" aria-label="Counts only summary"></textarea></details>
+<details><summary>Full exception list (select all and copy)</summary>
+<textarea id="exc" readonly="" aria-label="Exception list CSV"></textarea></details>
 </section>
 
-<section id="why">
-<h2>Why we built this</h2>
-<p class="note" style="font-size:1rem">We got tired of compliance advice written by people who have never chased a DBS application at 5pm on a Friday. Between us: 24 years across HR, banking operations and IT systems, plus frontline UK care administration. We have sat on both sides of the audit table — the side being inspected and the side doing the inspecting. We built the tool we wished existed: instant, honest, and allergic to other people's data.</p>
-<div class="nums">
-<div class="card"><b>~96,000</b><span class="note">adult social care vacancies in England on any given day — the sector runs on stretched managers</span></div>
-<div class="card"><b>9,000</b><span class="note">CQC assessments targeted as the backlog clears — stale ratings are being revisited first</span></div>
-<div class="card"><b>1 in 5</b><span class="note">care homes rated Requires Improvement or Inadequate — and required to display that rating, dated, where everyone sees it</span></div>
-<div class="card"><b>End of 2026</b><span class="note">new CQC sector-specific frameworks land — every evidence template in the country goes stale this winter</span></div>
-</div>
-<div class="people">
-<div class="card"><h3>Irving — The Engine</h3><p class="note">Certified Business Analyst, 12 years IT and banking: ERP implementations, ISO 20022 payment systems, core banking migrations. Now building tools instead of spreadsheets. Co-founder, IRVORA.</p></div>
-<div class="card"><h3>Ivone — The Face</h3><p class="note">BTech HRM, 12 years banking across HR, customer service and reconciliation. Tutor and IAG adviser. Co-founder, IRVORA.</p></div>
-</div>
+<section id="cta" hidden="">
+<h2>Red flags? We fix them live.</h2>
+<p>90-minute Zoom call. We work through <b>your</b> staff file on <b>your</b> screen — nothing is uploaded, sent or saved. DBS applications started, training bookings drafted, supervision schedule built: done <b>with</b> you in one session, not handed back as a to-do list.</p>
+<p id="ctacount" hidden=""></p>
+<p id="ctaclear" hidden="">All clear. Stay that way with a quarterly re-check.</p>
+<p><b>£249 one-off.</b> Includes a dated, printable remediation log for your audit trail, plus a free re-check after 14 days.</p>
+<p><a class="btn" href="evidence-rescue.html#book">Book My Evidence Rescue →</a></p>
+<p class="note">No tracker yet? The checker gives you the template free — fill it in, then book. Your data never leaves your machine at any point, in the tool or on the call.</p>
 </section>
 
-<section id="faq">
-<h2>Questions managers actually ask</h2>
-<details><summary>Is my staff data safe?</summary><p>Yes — structurally, not just by promise. The checker runs entirely in your browser: nothing is uploaded, sent or saved, and we could not see your file if we tried. On the Rescue call we work screen-shared, so the file never leaves your machine. We never ask you to email us a tracker.</p></details>
-<details><summary>Will this guarantee our CQC rating?</summary><p>No — and nobody honest sells that. We get your records inspection-ready: gaps found, evidence chased, audit trail dated. The inspection itself belongs to CQC.</p></details>
-<details><summary>What if we have 100+ staff?</summary><p>Fine — the checker takes one row per person. On the call we work through the red flags in priority order; extra time beyond 90 minutes is £49 per 30 minutes, agreed with you before it starts, never sprung after.</p></details>
-<details><summary>We don't have a tracker at all.</summary><p>Start with the free template inside the checker — Name, role, start date, DBS date, right to work, references, Care Certificate, Oliver McGowan tier, training expiry, supervision and appraisal dates. Fill what you know; the checker tells you what's missing.</p></details>
-<details><summary>Who are you?</summary><p>IRVORA — a London family venture. Staff Evidence Rescue is our Workflow Rescue product line: career and compliance tools for the UK care sector, built by people who have lived the night shift and the audit trail. Same team, same standards, one brand.</p></details>
-</section>
-
-<section id="book">
-<h2>Book your Evidence Rescue</h2>
-<p class="note"><span class="badge">£249 ONE-OFF</span>&nbsp; 90-minute Zoom · remediation log included · free 14-day re-check</p>
-<div class="ctas">
-<a class="btn" href="https://calendly.com/workrescue/new-meeting" target="_blank" rel="noopener">Pick a time slot</a>
-<a class="btn alt" href="/cdn-cgi/l/email-protection#50232520203f2224103922263f22317e333f7e253b6f2325323a3533246d15263934353e3335756260023523332535756260b2d0c4756260393e263f3933357562602235212535232476323f34296d18397562601902061f02117562137560117560110735756267347562603c393b35756260243f756260323f3f3b756260313e75626015263934353e333575626002352333253575626033313c3c7e756260003c3531233575626023353e34756260313e756260393e263f393335756260786560756265756260243f756260323f3f3b797e75601175601113312235756260383f3d3575626075621675626020223f2639343522756311756011023537392324352235347562603d313e3137352275631175601100223536352222353475626034312435237563117560117560110438313e3b23">Request an invoice instead</a>
-</div>
-<p class="note">We confirm every booking within 24 hours. Nothing to prepare beyond your tracker — and if you don't have one yet, the checker gives you the template free.</p>
-</section>
-
-<footer>
-<p><b>IRVORA</b> · Staff Evidence Rescue is a Workflow Rescue product line · London, UK · <a href="/cdn-cgi/l/email-protection#cab9bfbabaa5b8be8aa3b8bca5b8abe4a9a5e4bfa1"><span class="__cf_email__" data-cfemail="e4979194948b9690a48d96928b9685ca878bca918f">[email&#160;protected]</span></a></p>
-<p>Privacy in one line: we hold only your name, work email and organisation to arrange and invoice your call. Your staff file never reaches our systems at any point. <!-- Full privacy notice: link your /privacy page here --></p>
-<p class="note">The checker is a prompt for manager review against your own policy. It is not a CQC rating, a compliance certificate or legal advice. Rules reflect the March 2025 Care Certificate update (16 standards) and the September 2025 Oliver McGowan Code of Practice. Page reviewed October 2026.</p>
-<p class="note">© <span id="yr">2026</span> IRVORA. Built different. Proven results.</p>
-</footer>
+<p class="note">Red means a required record is missing, right to work is not evidenced, or mandatory training has expired. Amber means a manager should look: entries that may be mistyped, dates out of line with your rules, or records to confirm. Oliver McGowan training is legally required for CQC-registered providers under the Health and Care Act 2022. This is a prompt for manager review against your own policy. It is not a CQC rating, a compliance certificate or legal advice. Care Certificate prompts apply to staff new to care; confirm who needs it for each role. Rules reflect the March 2025 Care Certificate update (16 standards) and the September 2025 Oliver McGowan Code of Practice; page reviewed October 2026. Built by <strong>Irvora Compliance</strong> · <a href="https://www.irvora.co.uk">irvora.co.uk</a></p>
 </main>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
-var t=document.getElementById("theme");
-t.onclick=function(){var r=document.documentElement,c=r.getAttribute("data-theme");
-var dark=c?c==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;
-r.setAttribute("data-theme",dark?"light":"dark")};
-document.getElementById("yr").textContent=new Date().getFullYear();
+var $=function(i){return document.getElementById(i)};
+var FIELDS=[["ccstd",["standards"]],["cc",["carecert","ccdate"]],["om",["mcgowan","omtier","om"]],["dbs",["dbs"]],["rtw",["rightto","rtw"]],["refs",["reference","refs"]],["train",["training","expiry"]],["sup",["supervis"]],["appr",["apprais"]],["start",["start","joined"]],["role",["role","job","position"]],["name",["name","staff","employee","id"]]];
+var TPL="Name,Role,Start date,DBS date,Right to work,References,Care Certificate date,Care Certificate standards,OM tier,Training expiry,Last supervision,Last appraisal";
+$("tpl").value=TPL;
+function iso(d){return d.toISOString().slice(0,10)}
+function isoLocal(d){return d.getFullYear()+"-"+("0"+(d.getMonth()+1)).slice(-2)+"-"+("0"+d.getDate()).slice(-2)}
+$("today").value=isoLocal(new Date());
+function parseCSV(t){var rows=[],r=[],f="",q=false,i,c;t=t.replace(/\r/g,"");
+for(i=0;i<t.length;i++){c=t[i];
+if(q){if(c=='"'){if(t[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+else if(c=='"')q=true;else if(c==","){r.push(f);f=""}else if(c=="\n"){r.push(f);rows.push(r);r=[];f=""}else f+=c}
+if(f.length||r.length){r.push(f);rows.push(r)}
+return rows.filter(function(x){return x.some(function(y){return y.trim()})})}
+function mk(y,mo,d){var v=new Date(Date.UTC(y,mo-1,d));return v.getUTCFullYear()===y&&v.getUTCMonth()===mo-1&&v.getUTCDate()===d?v:undefined}
+function pdate(s){s=(s||"").trim();if(!s)return null;var m;
+if(m=s.match(/^(\d{4})-(\d{1,2})-(\d{1,2})/))return mk(+m[1],+m[2],+m[3]);
+if(m=s.match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})$/)){var y=+m[3];if(y<100)y+=2000;return mk(y,+m[2],+m[1])}
+return undefined}
+function amb(s){var m=(s||"").trim().match(/^(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})$/);return !!m&&+m[1]<=12&&+m[2]<=12&&m[1]!==m[2]}
+function norm(h){return h.toLowerCase().replace(/[^a-z0-9]/g,"")}
+function hit(fi,k,h){if(fi=="om"&&k=="om")return h==="om"||h==="tier"||h.indexOf("omtier")>-1;if(fi=="name"&&k=="id")return h==="id";return h.indexOf(k)>-1}
+function mapCols(hd){var used={},map={};
+FIELDS.forEach(function(f){for(var i=0;i<hd.length;i++){if(used[i])continue;var h=norm(hd[i]);
+if(f[1].some(function(k){return hit(f[0],k,h)})){map[f[0]]=i;used[i]=1;break}}});return map}
+function days(a,b){return Math.round((a-b)/864e5)}
+function addY(d,n){return new Date(Date.UTC(d.getUTCFullYear()+n,d.getUTCMonth(),d.getUTCDate()))}
+function run(){
+$("err").textContent="";$("out").hidden=true;
+var rows=parseCSV($("csv").value);
+if(rows.length<2){$("err").textContent="Add a header row and at least one staff row.";return}
+var map=mapCols(rows[0]);
+if(map.name===undefined&&map.dbs===undefined&&map.train===undefined){$("err").textContent="No known column headings found. Open 'Column headings it understands' and match the first row.";return}
+var td=pdate($("today").value)||new Date(),dbsY=+$("dbsy").value||3,refN=+$("refn").value,supD=+$("supd").value||90,appD=+$("appd").value||365,trwD=+$("trw").value||60,badDates=0,ambDates=0;
+var CC15=Date.UTC(2025,2,1);
+var res=[];
+rows.slice(1).forEach(function(r,n){
+function g(k){return map[k]===undefined?"":(r[map[k]]||"").trim()}
+function d(k){var s=g(k),v=pdate(s);if(v===undefined){badDates++;return"bad"}if(amb(s))ambDates++;return v}
+var is=[];function R(t){is.push(["r",t])}function A(t){is.push(["a",t])}
+var nm=g("name")||("Row "+(n+2));
+if(map.dbs!==undefined){var v=d("dbs");
+if(v==="bad")A("DBS date not readable: check entry");else if(!v)R("DBS date missing");
+else if(v>td)A("DBS date is in the future: check entry");
+else if(addY(v,dbsY)<td)A("DBS older than your "+dbsY+"-year recheck rule")}
+if(map.rtw!==undefined){var w=g("rtw").toLowerCase();if(w!="y"&&w!="yes")R("Right to work not evidenced")}
+if(map.refs!==undefined){var rc=parseInt(g("refs"),10)||0;if(rc<refN)R("Fewer than "+refN+" references on file")}
+if(map.train!==undefined){var t=d("train");
+if(t==="bad")A("Training expiry not readable: check entry");else if(!t)A("No training expiry recorded");
+else if(t<td)R("Mandatory training expired "+iso(t));else if(days(t,td)<=trwD)A("Training expires within "+trwD+" days ("+iso(t)+")")}
+if(map.cc!==undefined||map.ccstd!==undefined){var c=map.cc!==undefined?d("cc"):null,s=g("ccstd"),st=map.start!==undefined?d("start"):null;
+if(/15/.test(s)&&!/16/.test(s))A("Care Certificate recorded on 15 standards: review against the 16-standard set (March 2025)");
+else if(c&&c!=="bad"&&c.getTime()<CC15&&!/16/.test(s))A("Care Certificate completed before March 2025: confirm 16-standard coverage");
+else if(map.cc!==undefined&&!c&&st&&st!=="bad"&&days(td,st)>84)A("No Care Certificate date after 12 weeks in post: confirm whether this role needs it")}
+if(map.om!==undefined&&!g("om"))R("No Oliver McGowan tier or training-needs record");
+if(map.sup!==undefined){var s2=d("sup");if(!s2||s2==="bad")A("No supervision date recorded");else if(s2>td)A("Supervision date is in the future: check entry");else if(days(td,s2)>supD)A("Supervision overdue ("+days(td,s2)+" days)")}
+if(map.appr!==undefined){var a2=d("appr");if(!a2||a2==="bad")A("No appraisal date recorded");else if(a2>td)A("Appraisal date is in the future: check entry");else if(days(td,a2)>appD)A("Appraisal overdue ("+days(td,a2)+" days)")}
+var st2=is.some(function(x){return x[0]=="r"})?"r":is.length?"a":"g";
+res.push({n:nm,s:st2,i:is})});
+render(res,map,badDates,ambDates)}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function render(res,map,bad,ambg){
+var cnt={r:0,a:0,g:0},tally={};
+res.forEach(function(x){cnt[x.s]++;x.i.forEach(function(y){var k=y[1].replace(/\d{4}-\d{2}-\d{2}/,"").replace(/\(\d+ days\)/,"").trim();tally[k]=(tally[k]||0)+1})});
+var tot=res.length;
+$("kpis").innerHTML='<div class="k r"><b>'+cnt.r+'</b>Red: fix first</div><div class="k a"><b>'+cnt.a+'</b>Amber: manager to review</div><div class="k g"><b>'+cnt.g+'</b>Clear</div><div class="k"><b>'+tot+'</b>Staff checked</div>';
+$("bar").innerHTML='<i style="width:'+cnt.r/tot*100+'%;background:var(--red)"></i><i style="width:'+cnt.a/tot*100+'%;background:var(--amb)"></i><i style="width:'+cnt.g/tot*100+'%;background:var(--grn)"></i>';
+var order={r:0,a:1,g:2},sorted=res.slice().sort(function(a,b){return order[a.s]-order[b.s]});
+$("rows").innerHTML=sorted.map(function(x){var lab={r:"Red",a:"Amber",g:"Clear"}[x.s];
+return"<tr><td>"+esc(x.n)+'</td><td><span class="pill '+x.s+'">'+lab+"</span></td><td>"+(x.i.length?'<ul class="iss">'+x.i.map(function(y){return'<li class="'+y[0]+'">'+esc(y[1])+"</li>"}).join("")+"</ul>":"No gaps found")+"</td></tr>"}).join("");
+var top=Object.keys(tally).sort(function(a,b){return tally[b]-tally[a]}).slice(0,8).map(function(k){return tally[k]+" x "+k});
+$("cnt").value="Staff checked: "+tot+"\nRed: "+cnt.r+"\nAmber: "+cnt.a+"\nClear: "+cnt.g+"\nMost common gaps:\n"+(top.join("\n")||"None")+(bad?"\nUnreadable dates: "+bad:"")+(ambg?"\nAmbiguous day/month dates (read as day-first): "+ambg:"");
+var out=["Name,Status,Issue"];sorted.forEach(function(x){x.i.forEach(function(y){out.push('"'+x.n.replace(/"/g,'""')+'",'+{r:"Red",a:"Amber"}[y[0]]+',"'+y[1].replace(/"/g,'""')+'"')})});
+$("exc").value=out.join("\n");
+$("out").hidden=false;
+var cc=$("ctacount"),cl=$("ctaclear"),cta=$("cta");
+if(cnt.r>0){cc.hidden=false;cl.hidden=true;cc.textContent="Your check just found "+cnt.r+" red flag"+(cnt.r>1?"s":"")+" — the Rescue call clears them."}
+else{cc.hidden=true;cl.hidden=false}
+cta.hidden=false;
+$("out").scrollIntoView({behavior:"smooth",block:"start"})}
+function demo(){var t=pdate($("today").value)||new Date();
+function o(n){return iso(new Date(t.getTime()+n*864e5))}
+var L=[TPL,
+"Demo A,Care Assistant,"+o(-900)+","+o(-800)+",Y,2,"+o(-880)+",15,Tier 1,"+o(120)+","+o(-30)+","+o(-100),
+"Demo B,Senior Carer,"+o(-1500)+","+o(-1400)+",Y,2,"+o(-1450)+",,,"+o(-20)+","+o(-200)+","+o(-400),
+"Demo C,Care Assistant,"+o(-60)+",,Y,1,,,,"+o(40)+","+o(-10)+",",
+"Demo D,Night Carer,"+o(-400)+","+o(-380)+",N,2,"+o(-300)+",16,Tier 2,"+o(200)+","+o(-20)+","+o(-60),
+"Demo E,Team Leader,"+o(-2000)+","+o(-1500)+",Y,2,"+o(-1900)+",,Tier 2,"+o(300)+","+o(-50)+","+o(-120),
+"Demo F,Care Assistant,"+o(-200)+","+o(-190)+",Y,2,"+o(-150)+",16,Tier 1,"+o(250)+","+o(-25)+","+o(-30)];
+$("csv").value=L.join("\n");run()}
+$("run").onclick=run;$("demo").onclick=demo;
+$("clear").onclick=function(){$("csv").value="";$("out").hidden=true;$("err").textContent="";$("cnt").value="";$("exc").value="";$("rows").innerHTML="";$("cta").hidden=true};
+$("file").onchange=function(e){var f=e.target.files[0];if(!f)return;var fr=new FileReader();fr.onload=function(){$("csv").value=fr.result;run()};fr.readAsText(f)};
+$("theme").onclick=function(){var r=document.documentElement,c=r.getAttribute("data-theme");
+var dark=c?c==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;r.setAttribute("data-theme",dark?"light":"dark")};
+window.addEventListener("beforeprint",function(){var ds=document.querySelectorAll("details");for(var i=0;i<ds.length;i++)ds[i].open=true});
 })();
 </script>
-</body>
-</html>
+
+
+</body></html>
